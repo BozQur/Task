@@ -33,7 +33,12 @@ namespace ProgramСopying
             if (value == false)
             {
                 Console.WriteLine("Ошибка Католога не существует");
+
             }
+            string fileName = System.IO.Path.GetFileName(fileWhereFromCopYway);
+            string sourceFile = fileWhereFromCopYway;
+            string destFile = Path.Combine(fileWhereCopYway, fileName);
+            System.IO.File.Copy(sourceFile, destFile, true);
 
 
         }
