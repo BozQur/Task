@@ -29,24 +29,26 @@ namespace ProgramСopying
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.WhereFromCopyFile = new System.Windows.Forms.TextBox();
+            this.WhereCopyFile = new System.Windows.Forms.TextBox();
             this.CopyFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // WhereFromCopyFile
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 0;
+            this.WhereFromCopyFile.Location = new System.Drawing.Point(161, 111);
+            this.WhereFromCopyFile.Name = "WhereFromCopyFile";
+            this.WhereFromCopyFile.Size = new System.Drawing.Size(160, 20);
+            this.WhereFromCopyFile.TabIndex = 0;
+            this.WhereFromCopyFile.TextChanged += new System.EventHandler(this.WhereFromCopyFile_TextChanged);
             // 
-            // textBox2
+            // WhereCopyFile
             // 
-            this.textBox2.Location = new System.Drawing.Point(367, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
-            this.textBox2.TabIndex = 1;
+            this.WhereCopyFile.Location = new System.Drawing.Point(367, 111);
+            this.WhereCopyFile.Name = "WhereCopyFile";
+            this.WhereCopyFile.Size = new System.Drawing.Size(198, 20);
+            this.WhereCopyFile.TabIndex = 1;
+            this.WhereCopyFile.TextChanged += new System.EventHandler(this.WhereCopyFile_TextChanged);
             // 
             // CopyFile
             // 
@@ -56,6 +58,7 @@ namespace ProgramСopying
             this.CopyFile.TabIndex = 2;
             this.CopyFile.Text = "Copy";
             this.CopyFile.UseVisualStyleBackColor = true;
+            this.CopyFile.Click += new System.EventHandler(this.CopyFile_Click);
             // 
             // Form1
             // 
@@ -63,8 +66,8 @@ namespace ProgramСopying
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CopyFile);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.WhereCopyFile);
+            this.Controls.Add(this.WhereFromCopyFile);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -74,8 +77,8 @@ namespace ProgramСopying
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox WhereFromCopyFile;
+        private System.Windows.Forms.TextBox WhereCopyFile;
         private System.Windows.Forms.Button CopyFile;
     }
 }
